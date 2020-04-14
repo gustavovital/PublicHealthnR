@@ -81,8 +81,3 @@ age_categories <- ifelse(age < 45, '< 45',
 
 table(age_categories, gender)
 round(100*prop.table(table(age_categories, gender), margin = 1), digits = 2)
-
-
-
-
-
