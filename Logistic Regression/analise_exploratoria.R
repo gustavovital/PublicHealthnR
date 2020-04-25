@@ -1,5 +1,5 @@
 # Script para analise exploratória dos dados. Dados de saude pública de Londres
-# 
+#
 # Autor: Gustavo Vital
 # Data: 13/04/2020
 
@@ -20,7 +20,7 @@ colnames(g)
 
 # Criando variaveis ----
 
-chol <- g[,'chol']
+chol <-g[,'chol']
 gender <- as.factor(g[, 'gender'])
 dm <- as.factor(g[, 'dm'])
 
@@ -48,9 +48,9 @@ summary(imc)
 
 # Criando uma categoria para IMC ----
 
-imc_categorised <- ifelse(imc < 18.5, "underweight", 
-                          ifelse(imc >= 18.5 & imc <= 25, "normal", 
-                                 ifelse(imc > 25 & imc <= 30, "overweight", 
+imc_categorised <- ifelse(imc < 18.5, "underweight",
+                          ifelse(imc >= 18.5 & imc <= 25, "normal",
+                                 ifelse(imc > 25 & imc <= 30, "overweight",
                                         ifelse(imc > 30, "obese", NA))))
 
 table(imc_categorised, exclude = NULL)
